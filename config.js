@@ -18,7 +18,7 @@ global.defaultLenguaje = 'es';
 global.owner = [
   ['5215641961070', '👑 Mystic - Creador 👑', true],
   ['5219531627349', '💫 Mystic - Collaborator 2 💫', true],
-  ['51996089079', '💫 Mystic - Collaborator 3 💫', true],
+  ['5214774444444', '💫 Mystic - Collaborator 3 💫', true],
   ['5218442286089', '💫 Mystic - Collaborator 4 💫', true],
   ['50246028932', '💫 Mystic - Collaborator 5 💫', true],
   ['5212412377467', '💫 Mystic - Collaborator 6 💫', true],
