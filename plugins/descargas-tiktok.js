@@ -1,19 +1,19 @@
-import fg from 'api-dylux';
-import axios from 'axios';
-import cheerio from 'cheerio';
-import {tiktok} from '@xct007/frieren-scraper';
-import {generateWAMessageFromContent} from '@whiskeysockets/baileys';
-import {tiktokdl} from '@bochilteam/scraper';
+*//import fg from 'api-dylux';
+//import axios from 'axios';
+//import cheerio from 'cheerio';
+//import {tiktok} from '@xct007/frieren-scraper';
+//import {generateWAMessageFromContent} from '@whiskeysockets/baileys';
+//import {tiktokdl} from '@bochilteam/scraper';
 //const CFROSAPI = global.APIs.CFROSAPI;
-const handler = async (m, {conn, text, args, usedPrefix, command}) => {
+//const handler = async (m, {conn, text, args, usedPrefix, command}) => {
 //m.react('🍁') 
-  if (!text) throw `_*< DESCARGAS - TIKTOK />*_\n\n*☁️ Iɴɢʀᴇsᴇ Uɴ Eɴʟᴀᴄᴇ Dᴇ Vɪᴅᴇᴏ Dᴇ TɪᴋTᴏᴋ.*\n\n*☁ Eᴊᴇᴍᴘʟᴏ:* _${usedPrefix + command} https://www.tiktok.com/@xaiyekz/video/7368941682944953606_`;
-  if (!/(?:https:?\/{2})?(?:w{3}|vm|vt|t)?\.?tiktok.com\/([^\s&]+)/gi.test(text)) throw `*< DESCARGAS - TIKTOK />*\n\n*☁️ Iɴɢʀᴇsᴇ Uɴ Eɴʟᴀᴄᴇ Dᴇ Vɪᴅᴇᴏ Dᴇ Tɪᴋᴛᴏᴋ.*\n\n*☁ Eᴊᴇᴍᴘʟᴏ:* _${usedPrefix + command} https://www.tiktok.com/@xaiyekz/video/7368941682944953606_`;
-  const texto = `_💛 @${m.sender.split`@`[0]}  ᩭ✎Enviando Video, espere un momento...._`;
+ // if (!text) throw `_*< DESCARGAS - TIKTOK />*_\n\n*☁️ Iɴɢʀᴇsᴇ Uɴ Eɴʟᴀᴄᴇ Dᴇ Vɪᴅᴇᴏ Dᴇ TɪᴋTᴏᴋ.*\n\n*☁ Eᴊᴇᴍᴘʟᴏ:* _${usedPrefix + command} https://www.tiktok.com/@xaiyekz/video/7368941682944953606_`;
+  //if (!/(?:https:?\/{2})?(?:w{3}|vm|vt|t)?\.?tiktok.com\/([^\s&]+)/gi.test(text)) throw `*< DESCARGAS - TIKTOK />*\n\n*☁️ Iɴɢʀᴇsᴇ Uɴ Eɴʟᴀᴄᴇ Dᴇ Vɪᴅᴇᴏ Dᴇ Tɪᴋᴛᴏᴋ.*\n\n*☁ Eᴊᴇᴍᴘʟᴏ:* _${usedPrefix + command} https://www.tiktok.com/@xaiyekz/video/7368941682944953606_`;
+  //const texto = `_💛 @${m.sender.split`@`[0]}  ᩭ✎Enviando Video, espere un momento...._`;
   // let buttons = [{ buttonText: { displayText: '♫ 𝙰𝚄𝙳𝙸𝙾 ♫' }, buttonId: `${usedPrefix}tomp3` }]
   try {
 m.react('🍁') 
-    const aa = {quoted: m, userJid: conn.user.jid};
+    //const aa = {quoted: m, userJid: conn.user.jid};
     const prep = generateWAMessageFromContent(m.chat, {extendedTextMessage: {text: texto, contextInfo: {externalAdReply: {title: packname, body: wm, thumbnail: icons, sourceUrl: yt}, mentionedJid: [m.sender]}}}, aa);
     await conn.relayMessage(m.chat, prep.message, {messageId: prep.key.id, mentions: [m.sender]});
     const dataFn = await conn.getFile(`${CFROSAPI}/api/tiktokv2?url=${args[0]}`);
